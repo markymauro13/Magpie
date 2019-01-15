@@ -35,6 +35,7 @@ public class Magpie2
 		{
 			response = "Why so negative?"; 
 		}
+		
 		else if (statement.indexOf("mother") >= 0
 				|| statement.indexOf("father") >= 0
 				|| statement.indexOf("sister") >= 0
@@ -60,14 +61,16 @@ public class Magpie2
 		{
 			response = "You are not that";
 		}
+		else if (statement.indexOf(statement.trim()) == 0 && statement.length() == 0)
+		{
+			response = "Say something please";
+		}
 		else
 		{
 			response = getRandomResponse();
 		}
-		if (statement.indexOf(statement.trim()) >= 0)
-		{
-			response = "Say something please";
-		}
+		
+ 
 		return response;
 	}
 
